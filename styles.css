@@ -120,6 +120,16 @@ h2.title{ font-size:clamp(1.5rem,3.14vw,2.44rem); }
 .btn--outline-light:hover{ background:rgba(255,255,255,.1); }
 .btn--block{ width:100%; }
 
+a.btn[href*="wa.me"]{
+  --bg:#25D366;
+  --fg:#fff;
+  box-shadow:0 12px 28px -10px rgba(37,211,102,.5);
+}
+
+a.btn[href*="wa.me"]:hover{
+  box-shadow:0 16px 34px -12px rgba(37,211,102,.62);
+}
+
 /* ---------- Header ---------- */
 .header{
   position:fixed; inset:0 0 auto 0; z-index:100;
@@ -339,6 +349,106 @@ image-slot{ --is-bg:var(--green-wash); background:var(--green-wash); }
 .checklist span{ font-weight:600; color:var(--ink); font-size:1rem; }
 .checklist ul{ margin:0; padding:0; }
 
+/* ---------- Team / Professionals ---------- */
+.team-section{ position:relative; overflow:hidden; }
+.team-section::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto auto;
+  width:320px;
+  height:320px;
+  background:radial-gradient(circle, rgba(12,122,85,.1), transparent 68%);
+  pointer-events:none;
+}
+.team-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:28px;
+  margin-top:48px;
+}
+.team-card{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(280px,380px) minmax(0,1fr);
+  gap:30px;
+  align-items:center;
+  padding:26px;
+  background:#fff;
+  border:1px solid var(--grey-100);
+  border-radius:calc(var(--radius-lg) + 2px);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.team-card--reverse{
+  grid-template-columns:minmax(0,1fr) minmax(280px,380px);
+}
+.team-card--reverse .team-card__body{
+  order:1;
+}
+.team-card--reverse .team-card__media{
+  order:2;
+}
+.team-card::after{
+  content:"";
+  position:absolute;
+  inset:auto -44px -44px auto;
+  width:160px;
+  height:160px;
+  background:radial-gradient(circle, rgba(12,122,85,.08), transparent 72%);
+  pointer-events:none;
+}
+.team-card__media{ position:relative; min-height:100%; }
+.team-card__media img{
+  width:100%;
+  height:100%;
+  min-height:360px;
+  aspect-ratio:4/5;
+  display:block;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:calc(var(--radius) + 2px);
+  box-shadow:var(--shadow-sm);
+}
+.team-card__body{
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+}
+.team-card__name{
+  font-size:clamp(1.4rem,2.1vw,1.84rem);
+  line-height:1.02;
+  margin-bottom:10px;
+}
+.team-card__role,
+.team-card__subtitle{
+  font-family:var(--font-head);
+  font-weight:700;
+}
+.team-card__role{
+  font-size:1rem;
+  color:var(--green-dark);
+}
+.team-card__subtitle{
+  margin-top:6px;
+  font-size:.95rem;
+  color:var(--ink-60);
+}
+.team-card__copy{
+  margin-top:20px;
+  display:grid;
+  gap:16px;
+}
+.team-card__copy p{
+  margin:0;
+  color:var(--ink-60);
+  font-size:1rem;
+  line-height:1.72;
+}
+.team-card--reverse .team-card__body{
+  text-align:right;
+}
+
 /* ---------- Treatments ---------- */
 .treat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:48px; }
 .treat-card{
@@ -379,6 +489,12 @@ image-slot{ --is-bg:var(--green-wash); background:var(--green-wash); }
 
 /* ---------- Reviews ---------- */
 .review-carousel{ margin-top:48px; }
+.review-badge{
+  display:block;
+  width:auto;
+  height:53px;
+  margin:0 auto 16px;
+}
 .review-viewport{ overflow:hidden; }
 .review-track{
   --review-gap:18px;
@@ -555,6 +671,7 @@ image-slot{ --is-bg:var(--green-wash); background:var(--green-wash); }
   .tl-step__line{ display:none; }
   .about-grid{ grid-template-columns:1fr; }
   .about-visual{ max-width:480px; }
+  .team-grid{ grid-template-columns:1fr; }
   .loc-grid{ grid-template-columns:1fr; }
   .footer__grid{ grid-template-columns:1fr 1fr; }
   .footer__brand{ grid-column:1/-1; }
@@ -570,7 +687,7 @@ image-slot{ --is-bg:var(--green-wash); background:var(--green-wash); }
 @media (max-width:640px){
   body{ font-size:16px; }
   .wa-float{ bottom:78px; }
-  .sticky-cta{ display:block; }
+  .sticky-cta{ display:none; }
   body.has-sticky{ padding-bottom:80px; }
   #localizacao .section-head{
     margin-inline:auto;
@@ -590,6 +707,29 @@ image-slot{ --is-bg:var(--green-wash); background:var(--green-wash); }
   }
   #estrutura .checklist li{
     text-align:left;
+  }
+  .team-card{
+    grid-template-columns:1fr;
+    padding:18px;
+    gap:20px;
+  }
+  .team-card--reverse{
+    grid-template-columns:1fr;
+  }
+  .team-card--reverse .team-card__body,
+  .team-card--reverse .team-card__media{
+    order:initial;
+  }
+  .team-card__media img{
+    aspect-ratio:4/3;
+    min-height:280px;
+    height:auto;
+  }
+  .team-card__body{
+    text-align:center;
+  }
+  .team-card--reverse .team-card__body{
+    text-align:center;
   }
   .darkblock .darkblock__inner{
     margin-inline:auto;
@@ -652,6 +792,7 @@ image-slot{ --is-bg:var(--green-wash); background:var(--green-wash); }
   .review-track{ --review-cols:1; }
   .feat-grid,.treat-grid,.cols-3,.cols-2,.timeline{ grid-template-columns:1fr; }
   .pain-card{ padding:18px; }
+  .hero__cta{ display:none; }
   .hero__cta .btn{ width:100%; }
   .finalcta__btns .btn{ width:100%; }
   .footer__grid{ grid-template-columns:1fr; }
