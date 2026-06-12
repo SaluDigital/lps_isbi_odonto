@@ -29,7 +29,121 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20260612-4">
+<style id="page-fixes">
+  a.btn[href*="wa.me"],
+  a.btn[href*="wa.me"]:visited,
+  a.btn[href*="wa.me"]:hover,
+  a.btn[href*="wa.me"]:focus-visible,
+  .btn--wa,
+  .btn--wa:visited,
+  .btn--wa:hover,
+  .btn--wa:focus-visible{
+    --bg:#25D366 !important;
+    --fg:#fff !important;
+    background:#25D366 !important;
+    background-color:#25D366 !important;
+    color:#fff !important;
+    border-color:#25D366 !important;
+  }
+  .team-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+    margin-top:48px !important;
+  }
+  .team-card{
+    display:grid !important;
+    grid-template-columns:minmax(260px,380px) minmax(0,1fr) !important;
+    align-items:center !important;
+    gap:32px !important;
+    padding:26px !important;
+    background:#fff !important;
+    border:1px solid #E8ECE8 !important;
+    border-radius:28px !important;
+    box-shadow:0 14px 40px -18px rgba(15,40,30,.20) !important;
+    overflow:hidden !important;
+  }
+  .team-card--reverse{
+    grid-template-columns:minmax(0,1fr) minmax(260px,380px) !important;
+  }
+  .team-card--reverse .team-card__body{
+    order:1 !important;
+    text-align:right !important;
+  }
+  .team-card--reverse .team-card__media{
+    order:2 !important;
+  }
+  .team-card__media{
+    width:100% !important;
+    max-width:380px !important;
+  }
+  .team-card__media img{
+    width:100% !important;
+    height:auto !important;
+    min-height:360px !important;
+    aspect-ratio:4/5 !important;
+    object-fit:cover !important;
+    display:block !important;
+    border-radius:20px !important;
+  }
+  .team-card__body{
+    display:flex !important;
+    flex-direction:column !important;
+    min-width:0 !important;
+  }
+  .team-card__copy{
+    display:grid !important;
+    gap:16px !important;
+  }
+  .review-badge{
+    display:block !important;
+    width:160px !important;
+    max-width:160px !important;
+    height:auto !important;
+    margin:14px auto 22px !important;
+    object-fit:contain !important;
+  }
+  @media (max-width:640px){
+    .hero__cta{
+      display:flex !important;
+      margin-top:28px !important;
+    }
+    .hero__cta .btn{
+      width:100% !important;
+    }
+    .wa-float{
+      display:none !important;
+      visibility:hidden !important;
+      pointer-events:none !important;
+    }
+    .team-card,
+    .team-card--reverse{
+      grid-template-columns:1fr !important;
+      gap:20px !important;
+      padding:18px !important;
+    }
+    .team-card__body,
+    .team-card--reverse .team-card__body{
+      text-align:center !important;
+    }
+    .team-card--reverse .team-card__media{
+      order:initial !important;
+    }
+    .team-card__media{
+      max-width:none !important;
+    }
+    .team-card__media img{
+      min-height:280px !important;
+      aspect-ratio:4/3 !important;
+    }
+    .review-badge{
+      width:min(150px, 52vw) !important;
+      max-width:150px !important;
+      margin:12px auto 20px !important;
+    }
+  }
+</style>
 
 <!-- Local Business structured data -->
 <script type="application/ld+json">
@@ -104,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h1><span>Implante dentário</span><span>em Curitiba com</span><em>planejamento </em><em>individualizado</em></h1>
       <p class="hero__sub">Recupere segurança para mastigar, sorrir e viver com mais conforto com uma equipe especializada.</p>
       <div class="hero__cta">
-        <a class="btn btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20implante%20dent%C3%A1rio." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_hero')">
+        <a class="btn btn--wa btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20implante%20dent%C3%A1rio." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_hero')">
           <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp
         </a>
       </div>
@@ -129,7 +243,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></span><p>Precisa de um tratamento mais completo?</p></div>
     </div>
     <div style="text-align:center;margin-top:40px" class="reveal">
-      <a class="btn" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20implante%20dent%C3%A1rio." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_dor')">
+      <a class="btn btn--wa" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20implante%20dent%C3%A1rio." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_dor')">
         <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Quero entender meu caso
       </a>
     </div>
@@ -209,7 +323,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </article>
     </div>
     <div style="text-align:center;margin-top:44px" class="reveal">
-      <a class="btn btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20implante%20dent%C3%A1rio." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_diferenciais')">
+      <a class="btn btn--wa btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20implante%20dent%C3%A1rio." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_diferenciais')">
         <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp
       </a>
     </div>
@@ -224,7 +338,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="title">Cada sorriso exige um planejamento próprio</h2>
       <p class="lead">Antes de indicar um implante dentário, é essencial avaliar a saúde bucal, a condição óssea, as necessidades funcionais e os objetivos estéticos do paciente.</p>
       <div style="margin-top:30px">
-        <a class="btn btn--light btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20implante%20dent%C3%A1rio." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_avaliacao')">
+        <a class="btn btn--wa btn--light btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20implante%20dent%C3%A1rio." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_avaliacao')">
           <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Quero agendar minha avaliação
         </a>
       </div>
@@ -340,7 +454,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="section-head section-head--center reveal">
       <span class="eyebrow eyebrow--center">Depoimentos</span>
-      <img class="review-badge" src="assets/google.webp" alt="Google">
+      <img class="review-badge" src="assets/google.webp" alt="Google" width="160" height="53">
       <h2 class="title">Pacientes que confiam na ISBI Odonto</h2>
       <p class="lead">Depoimentos de pacientes atendidos na clínica. As avaliações podem ser conferidas diretamente no Google.</p>
     </div>
@@ -482,7 +596,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2>Recupere segurança ao mastigar e sorrir</h2>
       <p class="lead">Converse com a equipe da ISBI Odonto e agende uma avaliação para entender qual tratamento é indicado para o seu caso.</p>
       <div class="finalcta__btns">
-        <a class="btn btn--light btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20implante%20dent%C3%A1rio." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_final')">
+        <a class="btn btn--wa btn--light btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20implante%20dent%C3%A1rio." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_final')">
           <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp
         </a>
       </div>
@@ -529,7 +643,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Sticky mobile CTA -->
 <div class="sticky-cta">
-  <a class="btn" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20implante%20dent%C3%A1rio." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_sticky')">
+  <a class="btn btn--wa" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20implante%20dent%C3%A1rio." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_sticky')">
     <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Agendar avaliação
   </a>
 </div>
