@@ -192,7 +192,7 @@
         var tel = (form.querySelector('[name="whatsapp"]') || {}).value || "";
         var trat = (form.querySelector('[name="tratamento"]') || {}).value || "Implante dentário";
         track("cta_whatsapp_form", { tratamento_interesse: trat });
-        var msg = "Olá, vim pelo Google e gostaria de agendar uma avaliação para implante dentário."
+        var msg = "Olá, vim pelo Google e gostaria de mais informações sobre implante dentário."
           + (nome ? " Meu nome é " + nome + "." : "")
           + (tel ? " Telefone: " + tel + "." : "")
           + " Interesse: " + trat + ".";
