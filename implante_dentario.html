@@ -29,7 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css?v=20260612-4">
+<link rel="stylesheet" href="styles.css?v=20260617-1">
 <style id="page-fixes">
   a.btn[href*="wa.me"],
   a.btn[href*="wa.me"]:visited,
@@ -45,6 +45,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background-color:#25D366 !important;
     color:#fff !important;
     border-color:#25D366 !important;
+  }
+  .contact-actions{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+    margin-top:18px !important;
+  }
+  .contact-actions .btn{
+    width:100% !important;
+    min-height:58px !important;
+  }
+  .feat-callout{
+    margin-top:22px !important;
+    display:grid !important;
+    grid-template-columns:minmax(0,1.35fr) minmax(180px,.85fr) !important;
+    align-items:center !important;
+    gap:20px !important;
+    padding:24px 28px !important;
+    border:1px solid #cfe0d6 !important;
+    border-radius:26px !important;
+    background:linear-gradient(135deg, #f7faf8 0%, #e8f2ed 100%) !important;
+    box-shadow:0 1px 2px rgba(15,40,30,.05) !important;
+  }
+  .feat-callout__brand{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    min-width:0 !important;
+  }
+  .feat-callout__brand img{
+    width:min(220px, 100%) !important;
+    max-width:220px !important;
+    height:auto !important;
   }
   .team-grid{
     display:grid !important;
@@ -105,6 +139,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     object-fit:contain !important;
   }
   @media (max-width:640px){
+    .feat-callout{
+      grid-template-columns:1fr !important;
+      align-items:flex-start !important;
+    }
     .hero__cta{
       display:flex !important;
       margin-top:28px !important;
@@ -631,7 +669,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul>
           <li><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg>R. Prof. Ulisses Vieira, 1315 — Santa Quitéria, Curitiba - PR</li>
           <li><svg viewBox="0 0 24 24"><use href="#i-clock"/></svg>Segunda a sexta-feira</li>
-          <li><svg viewBox="0 0 24 24"><use href="#i-phone"/></svg>(41) 3228-1313 — clique para ligar ou falar no WhatsApp</li>
         </ul>
       </div>
       <div class="footer__col">

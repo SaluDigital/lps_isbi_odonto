@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Estética Dental em Curitiba | ISBI Odonto</title>
-<meta name="description" content="Agende sua avaliação para estética dental em Curitiba na ISBI Odonto. Tratamentos para melhorar a aparência do sorriso com planejamento individualizado.">
+<title>ISBI Odonto em Curitiba | Clínica Odontológica em Santa Quitéria</title>
+<meta name="description" content="Conheça a ISBI Odonto, clínica odontológica em Curitiba com atendimento integrado, laboratório anexo, centro cirúrgico próprio e planejamento individualizado.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.isbiodonto.com.br/">
 <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -20,8 +20,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Estética Dental em Curitiba | ISBI Odonto">
-<meta property="og:description" content="Tratamentos para melhorar a aparência do sorriso com estrutura completa e equipe especializada.">
+<meta property="og:title" content="ISBI Odonto em Curitiba | Clínica Odontológica em Santa Quitéria">
+<meta property="og:description" content="Conheça a ISBI Odonto, clínica odontológica em Curitiba com atendimento integrado, laboratório anexo, centro cirúrgico próprio e planejamento individualizado.">
 <meta property="og:locale" content="pt_BR">
 
 <!-- Fonts -->
@@ -55,6 +55,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .contact-actions .btn{
     width:100% !important;
     min-height:58px !important;
+  }
+  .hero::before{
+    background:
+      linear-gradient(90deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.9) 34%, rgba(255,255,255,.72) 52%, rgba(255,255,255,.18) 72%),
+      radial-gradient(120% 80% at 92% -8%, rgba(226,238,231,.72) 0%, transparent 46%),
+      url("assets/hero_institucional.webp") no-repeat center center/cover !important;
+  }
+  .darkblock{
+    background:
+      url("assets/call_institucional.webp") no-repeat right center/cover fixed !important;
+  }
+  .feat-callout{
+    margin-top:22px !important;
+    display:grid !important;
+    grid-template-columns:minmax(0,1.35fr) minmax(180px,.85fr) !important;
+    align-items:center !important;
+    gap:20px !important;
+    padding:24px 28px !important;
+    border:1px solid #cfe0d6 !important;
+    border-radius:26px !important;
+    background:linear-gradient(135deg, #f7faf8 0%, #e8f2ed 100%) !important;
+    box-shadow:0 1px 2px rgba(15,40,30,.05) !important;
+  }
+  .feat-callout__brand{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    min-width:0 !important;
+  }
+  .feat-callout__brand img{
+    width:min(220px, 100%) !important;
+    max-width:220px !important;
+    height:auto !important;
   }
   .team-grid{
     display:grid !important;
@@ -114,7 +148,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin:14px auto 22px !important;
     object-fit:contain !important;
   }
+  .team-section{
+    background:
+      linear-gradient(180deg, #f5f8f3 0%, #edf4ef 100%) !important;
+  }
+  .treatments-section{
+    background:
+      linear-gradient(180deg, #ffffff 0%, #fbfcfa 100%) !important;
+  }
   @media (max-width:640px){
+    .hero::before{
+      background-position:
+        0 0,
+        0 0,
+        calc(50% - 30px) center !important;
+    }
+    .feat-callout{
+      grid-template-columns:1fr !important;
+      align-items:flex-start !important;
+    }
     .hero__cta{
       display:flex !important;
       margin-top:28px !important;
@@ -157,42 +209,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   }
 </style>
-<style>
-  .hero--estetica::before{
-    background:
-      linear-gradient(90deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.9) 34%, rgba(255,255,255,.72) 52%, rgba(255,255,255,.18) 72%),
-      radial-gradient(120% 80% at 92% -8%, rgba(226,238,231,.72) 0%, transparent 46%),
-      url("assets/hero_estetica_dental.webp") no-repeat center center/cover;
-  }
-
-  @media (max-width: 640px){
-    .hero--estetica::before{
-      background:
-        linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.94) 42%, rgba(255,255,255,.84) 62%, rgba(255,255,255,.5) 100%),
-        radial-gradient(120% 80% at 92% -8%, rgba(226,238,231,.82) 0%, transparent 46%),
-        url("assets/hero_estetica_dental.webp") no-repeat calc(50% - 120px) center/cover;
-    }
-  }
-
-  .darkblock--estetica{
-    background:
-      url("assets/chamada_estetica_dental.webp") no-repeat right center/cover fixed;
-  }
-
-  @media (max-width: 640px){
-    .darkblock--estetica{
-      background-position:72% center;
-    }
-  }
-</style>
 
 <!-- Local Business structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Dentist",
-  "name": "ISBI Odonto — Instituto Sul-Brasileiro de Implantodontia",
-  "description": "Clínica odontológica especializada em estética dental e reabilitação estética em Curitiba.",
+  "name": "ISBI Odonto - Instituto Sul-Brasileiro de Implantodontia",
+  "description": "Clínica odontológica em Curitiba com atendimento integrado em reabilitação oral, prótese dentária, implantes dentários e odontologia estética.",
   "telephone": "0413228131",
   "address": {
     "@type": "PostalAddress",
@@ -242,6 +266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <g id="i-cube" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M12 3v9M4 7.5l8 4.5 8-4.5"/></g>
     <g id="i-up" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V7M7.5 11.5 12 7l4.5 4.5M5 4h14"/></g>
     <path id="i-star" d="M12 3.4l2.6 5.3 5.8.85-4.2 4.1 1 5.8-5.2-2.75-5.2 2.75 1-5.8-4.2-4.1 5.8-.85L12 3.4Z"/>
+    <g id="i-star-outline" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.8l2.55 5.18 5.72.83-4.14 4.03.98 5.69L12 16.82l-5.11 2.69.98-5.69-4.14-4.03 5.72-.83L12 3.8Z"/></g>
     <g id="i-route" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 4 4.2v13.6L9 20l6-2 5 1.8V6.2L15 4 9 6Z"/><path d="M9 6v14M15 4v14"/></g>
     <g id="i-ig" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><path d="M17 6.8h.01"/></g>
     <path id="i-fb" d="M13.2 21v-7.2h2.4l.36-2.8H13.2V9.2c0-.8.23-1.36 1.4-1.36h1.5V5.33c-.26-.03-1.15-.11-2.18-.11-2.16 0-3.64 1.32-3.64 3.74V11H7.86v2.8h2.42V21h2.92Z"/>
@@ -251,137 +276,142 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main id="topo">
 
 <!-- ============ 2. HERO ============ -->
-<section class="hero hero--estetica">
+<section class="hero">
   <div class="wrap hero__grid">
     <div class="hero__copy reveal">
-      <img class="hero__logo" src="assets/logo-isbi.png" alt="ISBI Odonto — Instituto Sul-Brasileiro de Implantodontia">
-      <span class="eyebrow"><span>Estética dental</span><span>em Curitiba</span></span>
-      <h1><span>Estética dental</span><span>com foco em um</span><em>sorriso </em><em>mais harmônico</em></h1>
-      <p class="hero__sub">Melhore a aparência do seu sorriso com um planejamento individualizado e tratamentos pensados para valorizar sua estética dental.</p>
+      <img class="hero__logo" src="assets/logo-isbi.png" alt="ISBI Odonto - Instituto Sul-Brasileiro de Implantodontia">
+      <span class="eyebrow"><span>Clínica odontológica</span><span>em Curitiba</span></span>
+      <h1><span>ISBI Odonto:</span><span>cuidado odontológico</span><em>integrado </em><em>em Curitiba</em></h1>
+      <p class="hero__sub">Atendimento humanizado, planejamento individualizado e estrutura completa para cuidar da sua saúde bucal, função mastigatória e estética do sorriso.</p>
       <div class="hero__cta">
-        <a class="btn btn--wa btn--lg hero__wa-mobile-hide" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20est%C3%A9tica%20dental." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_hero')">
+        <a class="btn btn--wa btn--lg hero__wa-mobile-hide" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_hero')">
           <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Gostaria de mais informações
         </a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ============ 3. DOR / IDENTIFICAÇÃO ============ -->
+<!-- ============ 3. DOR / IDENTIFICACAO ============ -->
 <section class="section section--tint" id="dor">
   <div class="wrap">
     <div class="section-head section-head--center reveal">
-      <span class="eyebrow eyebrow--center">Você não está sozinho</span>
-      <h2 class="title">Você sente que seu sorriso não reflete mais a imagem que deseja transmitir?</h2>
-      <p class="lead">Detalhes como cor, formato, alinhamento e proporção dos dentes podem impactar sua confiança ao sorrir. Em nossa estrutura, cada caso é avaliado individualmente para indicar a melhor solução em estética dental.</p>
+      <span class="eyebrow eyebrow--center">Cuidado completo</span>
+      <h2 class="title">Sua saúde bucal merece atenção em cada detalhe</h2>
+      <p class="lead">Cada sorriso tem uma história, uma necessidade e um objetivo. Na ISBI Odonto, o atendimento começa com uma avaliação individualizada para entender sua saúde bucal, suas expectativas e o melhor caminho para o seu tratamento.</p>
     </div>
     <div class="grid-cards cols-3 reveal">
-      <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-smile"/></svg></span><p>Tem vergonha de sorrir em fotos ou conversas?</p></div>
-      <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-star"/></svg></span><p>Quer dentes mais claros e harmoniosos?</p></div>
-      <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-crown"/></svg></span><p>Deseja corrigir formato ou proporção dos dentes?</p></div>
-      <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-heart"/></svg></span><p>Sente insegurança com a aparência do sorriso?</p></div>
-      <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-tooth"/></svg></span><p>Percebe manchas, desgastes ou pequenas falhas?</p></div>
-      <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></span><p>Busca um resultado natural e planejado?</p></div>
+      <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-tooth"/></svg></span><p>Precisa fazer uma avaliação odontológica?</p></div>
+      <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-smile"/></svg></span><p>Quer recuperar a estética do sorriso?</p></div>
+      <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-crown"/></svg></span><p>Tem dificuldade para mastigar?</p></div>
+      <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-heart"/></svg></span><p>Usa prótese e deseja mais conforto?</p></div>
+      <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-star-outline"/></svg></span><p>Procura atendimento com planejamento completo?</p></div>
+      <div class="pain-card"><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></span><p>Busca uma clínica odontológica em Curitiba com estrutura integrada?</p></div>
     </div>
     <div style="text-align:center;margin-top:40px" class="reveal">
-      <a class="btn btn--wa" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20est%C3%A9tica%20dental." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_dor')">
+      <a class="btn btn--wa" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_dor')">
         <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Gostaria de mais informações
       </a>
     </div>
   </div>
 </section>
-
 <!-- ============ 4. COMO FUNCIONA O TRATAMENTO ============ -->
 <section class="section" id="tratamento">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">O tratamento</span>
-      <h2 class="title">Como funciona o tratamento com estética dental?</h2>
-      <p class="lead">O tratamento é planejado para melhorar a aparência do sorriso com soluções que podem envolver <strong>clareamento</strong>, <strong>lentes</strong>, <strong>facetas</strong>, <strong>gengivoplastia</strong> e <strong>reabilitação estética</strong> conforme as necessidades de cada paciente.</p>
+      <span class="eyebrow">Atendimento</span>
+      <h2 class="title">Como funciona o atendimento na ISBI Odonto?</h2>
+      <p class="lead">O cuidado começa com uma escuta atenta e uma avaliação profissional. A partir disso, cada caso é planejado de forma individual, considerando saúde bucal, função, estética, exames necessários e objetivos do paciente.</p>
     </div>
     <div class="timeline reveal">
       <div class="tl-step">
         <div class="tl-step__num">1</div><div class="tl-step__line"></div>
         <h3>Avaliação inicial</h3>
-        <p>Entendimento das necessidades, histórico e condição bucal.</p>
+        <p>Entendimento das necessidades, histórico, queixas principais e condição bucal do paciente.</p>
       </div>
       <div class="tl-step">
         <div class="tl-step__num">2</div><div class="tl-step__line"></div>
         <h3>Diagnóstico e planejamento</h3>
-        <p>Análise clínica, exames e definição da melhor conduta.</p>
+        <p>Análise clínica, exames quando necessários e definição da melhor conduta para cada caso.</p>
       </div>
       <div class="tl-step">
         <div class="tl-step__num">3</div><div class="tl-step__line"></div>
-        <h3>Definição do tratamento</h3>
-        <p>Escolha da solução mais adequada conforme os objetivos estéticos, características do sorriso e expectativas do paciente.</p>
+        <h3>Tratamento indicado</h3>
+        <p>Execução das etapas planejadas com acompanhamento profissional e orientação ao paciente.</p>
       </div>
       <div class="tl-step">
         <div class="tl-step__num">4</div>
-        <h3>Reabilitação protética</h3>
-        <p>Execução do tratamento planejado para valorizar a harmonia, o formato e a cor do sorriso.</p>
+        <h3>Acompanhamento e manutenção</h3>
+        <p>Orientações para preservar a saúde bucal, acompanhar resultados e manter o cuidado ao longo do tempo.</p>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ============ 5. DIFERENCIAIS ============ -->
 <section class="section section--tint" id="diferenciais">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Nossa estrutura</span>
-      <h2 class="title">Estrutura completa para planejar seu tratamento estético com segurança</h2>
+      <h2 class="title">Estrutura completa para cuidar do seu sorriso com mais segurança</h2>
     </div>
     <div class="feat-grid reveal">
-      <article class="feat-card feat-card--featured" data-badge="ESTRUTURA">
+      <article class="feat-card feat-card--featured" data-badge="DIFERENCIAL">
         <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-flask"/></svg></div>
         <h3>Laboratório anexo ao consultório</h3>
-        <p>O laboratório anexo ao consultório aproxima as etapas clínica e protética, contribuindo para mais precisão, agilidade e personalização em diferentes fases do tratamento.</p>
+        <p>O laboratório anexo ao consultório aproxima as etapas clínicas e laboratoriais, contribuindo para mais precisão, agilidade e personalização em diferentes fases do tratamento.</p>
       </article>
-      <article class="feat-card feat-card--featured" data-badge="DIFERENCIAL">
+      <article class="feat-card feat-card--featured" data-badge="ESTRUTURA">
         <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-scan"/></svg></div>
         <h3>Centro cirúrgico próprio</h3>
-        <p>O centro cirúrgico da clínica amplia a segurança e o suporte para procedimentos que fazem parte de planejamentos estéticos mais completos.</p>
+        <p>O centro cirúrgico da clínica permite realizar etapas cirúrgicas com mais previsibilidade, suporte e segurança para casos que exigem maior estrutura.</p>
       </article>
       <article class="feat-card">
         <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-team"/></svg></div>
         <h3>Avaliação com o próprio profissional</h3>
-        <p>A avaliação é feita pelo mesmo profissional que executa o tratamento, trazendo mais clareza no diagnóstico e mais segurança na definição da melhor conduta.</p>
+        <p>A avaliação é feita pelo profissional responsável pelo planejamento e condução do tratamento, trazendo mais clareza no diagnóstico e na tomada de decisão.</p>
       </article>
       <article class="feat-card">
-        <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-grid"/></svg></div>
-        <h3>Planejamento estético integrado</h3>
-        <p>Estética, prótese e clínica geral atuam de forma integrada para buscar harmonia, função e naturalidade no sorriso.</p>
+        <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg></div>
+        <h3>Localização estratégica</h3>
+        <p>Localizada no bairro Santa Quitéria, a ISBI Odonto tem fácil acesso para pacientes de diferentes regiões de Curitiba.</p>
       </article>
       <article class="feat-card">
         <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-heart"/></svg></div>
         <h3>Atendimento humanizado</h3>
-        <p>Um atendimento próximo, claro e cuidadoso para que o paciente entenda cada etapa do tratamento.</p>
+        <p>Um atendimento próximo, claro e cuidadoso para que o paciente entenda cada etapa do tratamento e se sinta acolhido durante sua jornada.</p>
       </article>
     </div>
+    <div class="feat-callout reveal">
+      <div class="feat-callout__copy">
+        <span class="feat-callout__eyebrow">Credenciamento</span>
+        <h3>Clínica credenciada para implantes pela Coppel</h3>
+        <p>Além da estrutura clínica e cirúrgica, a ISBI Odonto é credenciada pela Coppel para tratamentos com implantes dentários.</p>
+      </div>
+      <div class="feat-callout__brand">
+        <img src="assets/Copel.svg.png" alt="Copel">
+      </div>
+    </div>
     <div style="text-align:center;margin-top:44px" class="reveal">
-      <a class="btn btn--wa btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20est%C3%A9tica%20dental." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_diferenciais')">
+      <a class="btn btn--wa btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_diferenciais')">
         <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Gostaria de mais informações
       </a>
     </div>
   </div>
 </section>
-
-<!-- ============ 6. AVALIAÇÃO INDIVIDUALIZADA (dark) ============ -->
-<section class="section darkblock darkblock--estetica">
+<!-- ============ 6. AVALIACAO INDIVIDUALIZADA (dark) ============ -->
+<section class="section darkblock">
   <div class="wrap">
     <div class="darkblock__inner reveal">
-      <span class="eyebrow" style="color:var(--green-soft)">Avaliação individualizada</span>
-      <h2 class="title">Cada sorriso exige um planejamento próprio</h2>
-      <p class="lead">Antes de indicar um tratamento estético, é essencial avaliar a saúde bucal, o formato do sorriso, a harmonia facial e os objetivos estéticos do paciente. Essa avaliação é realizada pelo próprio profissional responsável pela execução do tratamento.</p>
+      <span class="eyebrow" style="color:var(--green-soft)">Planejamento individualizado</span>
+      <h2 class="title">Cada paciente precisa de um plano de cuidado próprio</h2>
+      <p class="lead">Antes de indicar qualquer tratamento, é essencial avaliar a saúde bucal, a função mastigatória, as necessidades estéticas e os objetivos de cada paciente. Na ISBI Odonto, o planejamento é feito de forma individualizada, com orientação clara sobre as possibilidades de tratamento.</p>
       <div style="margin-top:30px">
-        <a class="btn btn--wa btn--light btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20est%C3%A9tica%20dental." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_avaliacao')">
+        <a class="btn btn--wa btn--light btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_avaliacao')">
           <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Agendar pelo WhatsApp
         </a>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ============ 7. SOBRE A ISBI ============ -->
 <section class="section" id="estrutura">
   <div class="wrap about-grid">
@@ -389,15 +419,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <img class="main-photo" src="assets/clinica.webp" alt="Interior da clínica ISBI Odonto">
       <div class="mini-card">
         <div class="big">+ Integração</div>
-        <div class="lbl">entre etapas clínicas e laboratoriais no mesmo local</div>
+        <div class="lbl">entre avaliação, etapas clínicas e suporte laboratorial no mesmo local</div>
       </div>
     </div>
     <div class="about-copy reveal">
       <span class="eyebrow">Sobre</span>
-      <h2 class="title">O ISBI Odonto une reabilitação oral e estrutura completa em Curitiba</h2>
-      <p class="lead">Somos uma clínica odontológica especializada em reabilitação oral, com foco em implantes dentários, próteses e tratamentos voltados à recuperação da função mastigatória e da estética do sorriso.</p>
+      <h2 class="title">O ISBI Odonto une experiência, estrutura e cuidado em Curitiba</h2>
+      <p class="lead">Somos uma clínica odontológica com foco em reabilitação oral, próteses, implantes dentários e tratamentos voltados à recuperação da função mastigatória, saúde bucal e estética do sorriso.</p>
       <p>Localizada no bairro Santa Quitéria, com fácil acesso para pacientes de diferentes regiões de Curitiba, a clínica atua há 23 anos com experiência clínica e planejamento personalizado.</p>
-      <p>Entre os diferenciais da nossa estrutura estão o laboratório de prótese próprio, o centro cirúrgico e a integração entre planejamento, execução e acabamento estético no mesmo local.</p>
+      <p>Entre os diferenciais da nossa estrutura estão o laboratório de prótese próprio, o centro cirúrgico e a integração entre diagnóstico, etapas clínicas, procedimentos cirúrgicos e reabilitação protética no mesmo local.</p>
     </div>
   </div>
 </section>
@@ -407,8 +437,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="section-head section-head--center reveal">
       <span class="eyebrow eyebrow--center">Nossos profissionais</span>
-      <h2 class="title">Especialistas responsáveis pelo seu tratamento</h2>
-      <p class="lead">Conheça os profissionais que atuam na ISBI com foco em estética dental, reabilitação oral, planejamento individualizado e atendimento acolhedor.</p>
+      <h2 class="title">Profissionais responsáveis pelo seu atendimento</h2>
+      <p class="lead">Conheça os profissionais que atuam na ISBI Odonto com foco em reabilitação oral, implantes dentários, próteses, odontologia estética, planejamento individualizado e atendimento acolhedor.</p>
     </div>
     <div class="team-grid">
       <article class="team-card reveal">
@@ -417,8 +447,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="team-card__body">
           <h3 class="team-card__name">Dr. Luciano Zanetti</h3>
-          <div class="team-card__role">Cirurgião-dentista — CRO 11612/PR</div>
-          <div class="team-card__subtitle">Responsável técnico da ISBI — Instituto Sul Brasileiro de Implantodontia</div>
+          <div class="team-card__role">Cirurgião-dentista - CRO 11612/PR</div>
+          <div class="team-card__subtitle">Responsável técnico da ISBI - Instituto Sul Brasileiro de Implantodontia</div>
           <div class="team-card__copy">
             <p>O Dr. Luciano Zanetti é cirurgião-dentista graduado pela Universidade Estadual de Ponta Grossa, em 1997, e especialista em Implantodontia pela Universidade Federal do Paraná.</p>
             <p>Com 28 anos de experiência em implantes dentários, atua no planejamento e execução de tratamentos voltados à reabilitação oral, devolvendo função, segurança e qualidade de vida aos pacientes por meio de soluções com implantes e próteses.</p>
@@ -432,7 +462,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="team-card__body">
           <h3 class="team-card__name">Dra. Stéphanie Padilha Geraldini</h3>
-          <div class="team-card__role">Cirurgiã-dentista — CRO-PR 21043</div>
+          <div class="team-card__role">Cirurgiã-dentista - CRO-PR 21043</div>
           <div class="team-card__copy">
             <p>A Dra. Stéphanie Padilha Geraldini é cirurgiã-dentista formada pela Universidade Tuiuti do Paraná, em 2010.</p>
             <p>É especialista em Prótese Dentária e atua também nas áreas de odontologia restauradora e estética, com formação complementar em próteses sobre implante. Com 16 anos de experiência em reabilitação oral e estética dental, realiza tratamentos voltados à recuperação do sorriso, função mastigatória e harmonia estética, sempre com planejamento individualizado para cada paciente.</p>
@@ -444,47 +474,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ============ 9. TRATAMENTOS RELACIONADOS ============ -->
-<section class="section section--tint">
+<section class="section section--tint treatments-section">
   <div class="wrap">
     <div class="section-head section-head--center reveal">
-      <span class="eyebrow eyebrow--center">Planejamento integrado</span>
-      <h2 class="title">Tratamentos que podem fazer parte do seu planejamento</h2>
+      <span class="eyebrow eyebrow--center">Tratamentos</span>
+      <h2 class="title">Tratamentos que podem fazer parte do seu planejamento odontológico</h2>
+      <p class="lead">A ISBI Odonto reúne diferentes áreas da odontologia para oferecer um cuidado mais completo, sempre a partir de uma avaliação individualizada.</p>
     </div>
     <div class="treat-grid reveal">
       <article class="treat-card">
         <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-tooth"/></svg></div>
-        <h3>Lentes de contato dentais</h3>
-        <p>Tratamento voltado para melhorar forma, proporção e estética do sorriso em casos selecionados.</p>
+        <h3>Implantes dentários</h3>
+        <p>Indicados para substituir um ou mais dentes perdidos, conforme avaliação clínica e planejamento profissional.</p>
       </article>
       <article class="treat-card">
         <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-crown"/></svg></div>
-        <h3>Facetas de resina composta</h3>
-        <p>Opção com <strong><u>maior rapidez de execução e custo mais acessível</u></strong> para ajustes estéticos planejados.</p>
+        <h3>Próteses dentárias</h3>
+        <p>Soluções para recuperar função mastigatória, estética e conforto em diferentes necessidades de reabilitação oral.</p>
       </article>
       <article class="treat-card">
         <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-arch"/></svg></div>
-        <h3>Facetas de porcelana</h3>
-        <p>Alternativa com <strong><u>maior previsibilidade e estabilidade</u></strong> para mudanças estéticas com foco em harmonia, cor e formato dental.</p>
+        <h3>Prótese sobre implante</h3>
+        <p>Alternativa para reabilitação com mais estabilidade em relação a próteses removíveis, quando indicada para o caso.</p>
       </article>
       <article class="treat-card">
         <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-cube"/></svg></div>
-        <h3>Clareamento dental</h3>
-        <p>Tratamento indicado para melhorar a tonalidade dos dentes e valorizar o sorriso.</p>
+        <h3>Prótese protocolo</h3>
+        <p>Solução fixa sobre implantes para casos selecionados, de acordo com avaliação profissional.</p>
       </article>
       <article class="treat-card">
         <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-up"/></svg></div>
-        <h3>Gengivoplastia</h3>
-        <p>Procedimento que pode contribuir para um contorno gengival mais harmônico, conforme avaliação profissional.</p>
+        <h3>Reabilitação oral</h3>
+        <p>Planejamento integrado para recuperar função, estética e equilíbrio do sorriso em casos mais completos.</p>
+      </article>
+      <article class="treat-card">
+        <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-smile"/></svg></div>
+        <h3>Odontologia estética e restauradora</h3>
+        <p>Tratamentos voltados à harmonia do sorriso, restauração de dentes e melhora estética, sempre com indicação individual.</p>
+      </article>
+      <article class="treat-card">
+        <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-star"/></svg></div>
+        <h3>Clareamento dental</h3>
+        <p>Procedimento estético indicado para melhorar a tonalidade dos dentes, quando adequado para o paciente.</p>
+      </article>
+      <article class="treat-card">
+        <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-heart"/></svg></div>
+        <h3>Prevenção e manutenção</h3>
+        <p>Cuidados periódicos para acompanhar a saúde bucal, prevenir problemas e manter os resultados dos tratamentos.</p>
       </article>
       <article class="treat-card treat-card--note">
         <div class="treat-card__note-icon"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></div>
-        <h3>Reabilitação estética</h3>
-        <p>Planejamento integrado para melhorar a aparência do sorriso de forma global e natural.</p>
+        <h3>Indicação individual</h3>
+        <p>A indicação de qualquer tratamento depende da avaliação profissional, exames necessários e planejamento personalizado para cada paciente.</p>
       </article>
     </div>
   </div>
 </section>
-
 <!-- ============ 9. PROVA SOCIAL ============ -->
 <section class="section">
   <div class="wrap">
@@ -508,7 +553,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="stars" aria-label="5 estrelas">
           <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg>
         </div>
-        <p class="quote">Atendimento da Dra. CAMILA foi excelente..fiz profilaxia e ainda vou fazer clareamento! As expectativas foram superadas!</p>
+        <p class="quote">Atendimento da Dra. Camila foi excelente. Fiz profilaxia e ainda vou fazer clareamento! As expectativas foram superadas!</p>
             <div class="who"><div><b>Angela Gomes da Rocha</b></div></div>
       </article>
       <article class="review-card">
@@ -522,7 +567,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="stars" aria-label="5 estrelas">
           <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg>
         </div>
-        <p class="quote">Exelente atendimento por todos, muito satisfeita com o resultado do tratamento, obrigada Dr Luciano Zanetti profissional seguro do que faz que transmite tranquilidade e confiança ao paciente. Clinica bem localizada e tranquilidade para estacionar. Obrigada!!!</p>
+        <p class="quote">Excelente atendimento por todos, muito satisfeita com o resultado do tratamento. Obrigada Dr. Luciano Zanetti, profissional seguro do que faz, que transmite tranquilidade e confiança ao paciente. Clínica bem localizada e tranquilidade para estacionar. Obrigada!</p>
         <div class="who"><div><b>Cleonice Paes de Freiria</b></div></div>
       </article>
       <article class="review-card">
@@ -537,7 +582,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-star"/></svg>
         </div>
         <p class="quote">Excelente atendimento, muito atenciosos, muito satisfeito com os resultados do meu tratamento.</p>
-        <div class="who"><div><b>assir soares</b></div></div>
+        <div class="who"><div><b>Assir Soares</b></div></div>
       </article>
         </div>
       </div>
@@ -551,12 +596,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ============ 10. LOCALIZAÇÃO ============ -->
+<!-- ============ 10. LOCALIZACAO ============ -->
 <section class="section section--tint" id="localizacao">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Localização</span>
-      <h2 class="title">Estética dental em Santa Quitéria, Curitiba</h2>
+      <h2 class="title">Clínica odontológica em Santa Quitéria, Curitiba</h2>
       <p class="lead">O ISBI Odonto está localizado no bairro Santa Quitéria, com fácil acesso para pacientes de regiões próximas como Água Verde, Vila Isabel, Fazendinha, Ecoville, Arthur Bernardes e Mário Tourinho.</p>
     </div>
     <div class="loc-grid reveal">
@@ -566,7 +611,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="loc-card">
         <h3>ISBI Odonto</h3>
-        <p class="addr">R. Prof. Ulisses Vieira, 1315 — Santa Quitéria, Curitiba - PR, 80310-120</p>
+        <p class="addr">R. Prof. Ulisses Vieira, 1315 - Santa Quitéria, Curitiba - PR, 80310-120</p>
         <ul class="loc-list">
           <li><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-clock"/></svg></span><div><b>Atendimento</b><small>De segunda a sexta-feira</small></div></li>
           <li><span class="ico"><svg viewBox="0 0 24 24"><use href="#i-route"/></svg></span><div><b>Santa Quitéria</b><small>Fácil acesso para pacientes de diferentes regiões</small></div></li>
@@ -576,7 +621,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a class="btn btn--call" href="tel:0413228131" onclick="isbiTrack('cta_ligar_localizacao')">
             <svg viewBox="0 0 24 24"><use href="#i-phone"/></svg>Clique para ligar
           </a>
-          <a class="btn btn--wa" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20est%C3%A9tica%20dental." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_localizacao')">
+          <a class="btn btn--wa" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_localizacao')">
             <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Agendar pelo WhatsApp
           </a>
         </div>
@@ -590,54 +635,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="section-head section-head--center reveal">
       <span class="eyebrow eyebrow--center">Dúvidas frequentes</span>
-      <h2 class="title">Perguntas frequentes sobre estética dental</h2>
+      <h2 class="title">Perguntas frequentes sobre a ISBI Odonto</h2>
     </div>
     <div class="faq-wrap reveal">
       <div class="faq-item">
-        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>Quem pode fazer tratamento de estética dental?</span></button>
-        <div class="faq-a"><div>Pacientes que desejam melhorar a aparência do sorriso podem ser candidatos, mas a indicação depende de uma avaliação clínica e das condições de saúde bucal.</div></div>
+        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>A ISBI Odonto atende quais tratamentos?</span></button>
+        <div class="faq-a"><div>A ISBI Odonto atua com reabilitação oral, implantes dentários, próteses dentárias, próteses sobre implante, odontologia restauradora, estética dental, clareamento e cuidados preventivos. A indicação de cada tratamento depende de avaliação profissional.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>Qual tratamento estético é mais indicado para mim?</span></button>
-        <div class="faq-a"><div>A resposta depende do objetivo do paciente, das características do sorriso e da avaliação profissional. O planejamento pode envolver clareamento, lentes, facetas, gengivoplastia ou reabilitação estética.</div></div>
+        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>A clínica atende somente implantes?</span></button>
+        <div class="faq-a"><div>Não. Embora a ISBI tenha forte atuação em implantodontia e reabilitação oral, a clínica reúne diferentes especialidades odontológicas para oferecer um cuidado mais completo em um único local.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>Clareamento dental é para qualquer caso?</span></button>
-        <div class="faq-a"><div>Nem todos os casos têm a mesma indicação. A avaliação profissional ajuda a entender se o clareamento é adequado e qual abordagem faz mais sentido para o objetivo estético.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>O que são lentes de contato dentais?</span></button>
-        <div class="faq-a"><div>São laminados estéticos ultrafinos indicados em casos selecionados para melhorar forma, cor e harmonia do sorriso. A indicação depende da avaliação do caso.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>Qual a diferença entre faceta de resina e faceta de porcelana?</span></button>
-        <div class="faq-a"><div>As duas opções podem ser usadas para melhorar a estética do sorriso, mas a indicação varia conforme planejamento, características dos dentes e objetivos do paciente.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>A avaliação é necessária antes do orçamento?</span></button>
-        <div class="faq-a"><div>Sim. O orçamento depende da análise individual, do tipo de tratamento estético, da complexidade do caso e do planejamento indicado. <strong>Essa avaliação é feita pelo próprio profissional que executa o tratamento.</strong></div></div>
+        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>Preciso passar por avaliação antes do orçamento?</span></button>
+        <div class="faq-a"><div>Sim. O orçamento depende da análise individual, condição bucal, exames necessários, tipo de tratamento indicado e planejamento profissional. A avaliação ajuda a definir a melhor conduta para cada caso.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>A clínica possui laboratório de prótese?</span></button>
         <div class="faq-a"><div>Sim. A clínica conta com laboratório anexo ao consultório, o que contribui para maior integração entre dentista e laboratório em diferentes etapas do tratamento.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>A clínica atende somente estética dental?</span></button>
-        <div class="faq-a"><div>Não. O ISBI Odonto reúne diferentes especialidades odontológicas, permitindo um atendimento mais completo em um único local.</div></div>
+        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>A ISBI Odonto tem centro cirúrgico próprio?</span></button>
+        <div class="faq-a"><div>Sim. A clínica possui centro cirúrgico próprio, permitindo realizar procedimentos indicados com mais estrutura, previsibilidade e suporte.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>Onde fica a ISBI Odonto?</span></button>
+        <div class="faq-a"><div>A ISBI Odonto fica na R. Prof. Ulisses Vieira, 1315, no bairro Santa Quitéria, em Curitiba - PR.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>Como faço para agendar uma avaliação?</span></button>
+        <div class="faq-a"><div>Você pode entrar em contato pelo telefone ou WhatsApp da clínica: (41) 3228-1313. A equipe irá orientar sobre horários e informações necessárias para o atendimento.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="qmark"><svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg></span><span>A indicação de tratamento é igual para todos os pacientes?</span></button>
+        <div class="faq-a"><div>Não. Cada paciente precisa de uma avaliação individualizada. O planejamento considera saúde bucal, histórico, exames, função mastigatória, estética e objetivos do paciente.</div></div>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ============ 12. CTA FINAL + FORM ============ -->
 <section class="section finalcta">
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow eyebrow--center" style="color:var(--green-soft)">Dê o primeiro passo</span>
-      <h2>Valorize a aparência do seu sorriso</h2>
-      <p class="lead">Converse com a equipe do ISBI Odonto para receber mais informações e entender qual tratamento de estética dental pode ser indicado para o seu caso.</p>
+      <h2>Cuide da sua saúde bucal com planejamento e acolhimento</h2>
+      <p class="lead">Converse com a equipe da ISBI Odonto para receber mais informações, agendar uma avaliação e entender quais tratamentos podem ser indicados para o seu caso.</p>
       <div class="finalcta__btns">
-        <a class="btn btn--wa btn--light btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20est%C3%A9tica%20dental." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_final')">
+        <a class="btn btn--wa btn--light btn--lg" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_final')">
           <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>Gostaria de mais informações
         </a>
       </div>
@@ -650,27 +694,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="footer__grid">
       <div class="footer__brand">
-        <img src="assets/logo-isbi-white.png" alt="ISBI Odonto — Instituto Sul-Brasileiro de Implantodontia">
-        <p>Estética dental e especialidades odontológicas integradas em uma estrutura completa em Curitiba, com laboratório anexo e atendimento humanizado.</p>
+        <img src="assets/logo-isbi-white.png" alt="ISBI Odonto - Instituto Sul-Brasileiro de Implantodontia">
+        <p>Odontologia integrada, reabilitação oral, prótese, implantes dentários e cuidados estéticos em uma estrutura completa em Curitiba, com laboratório anexo, centro cirúrgico próprio e atendimento humanizado.</p>
         
       </div>
       <div class="footer__col">
         <h4>Contato</h4>
         <ul>
-          <li><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg>R. Prof. Ulisses Vieira, 1315 — Santa Quitéria, Curitiba - PR</li>
+          <li><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg>R. Prof. Ulisses Vieira, 1315 - Santa Quitéria, Curitiba - PR</li>
           <li><svg viewBox="0 0 24 24"><use href="#i-clock"/></svg>Segunda a sexta-feira</li>
         </ul>
       </div>
       <div class="footer__col">
         <h4>Responsável técnico</h4>
         <ul>
-          <li><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg>Dr. Luciano Zanetti — CRO/PR 11612</li>
+          <li><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg>Dr. Luciano Zanetti - CRO/PR 11612</li>
           <li><svg viewBox="0 0 24 24"><use href="#i-grid"/></svg>CRO da clínica: 1106</li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© <span id="year">2026</span> ISBI — Instituto Sul-Brasileiro de Implantodontia. Todos os direitos reservados. Desenvolvido por SuperDental®</span>
+      <span>© <span id="year">2026</span> ISBI - Instituto Sul-Brasileiro de Implantodontia. Todos os direitos reservados. Desenvolvido por SuperDental®</span>
     </div>
   </div>
 </footer>
@@ -678,7 +722,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <!-- Floating WhatsApp (mobile) -->
-<a class="wa-float" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20est%C3%A9tica%20dental." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" onclick="isbiTrack('cta_whatsapp_float')">
+<a class="wa-float" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" onclick="isbiTrack('cta_whatsapp_float')">
   <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>
 </a>
 
@@ -688,7 +732,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a class="btn btn--call" href="tel:0413228131" onclick="isbiTrack('cta_ligar_sticky')">
       <svg viewBox="0 0 24 24"><use href="#i-phone"/></svg>Ligar agora
     </a>
-    <a class="btn btn--wa" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20est%C3%A9tica%20dental." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_sticky')">
+    <a class="btn btn--wa" href="https://wa.me/554132281313?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" onclick="isbiTrack('cta_whatsapp_sticky')">
       <svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg>WhatsApp
     </a>
   </div>
@@ -698,3 +742,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="app.js"></script>
 </body>
 </html>
+
+
+
