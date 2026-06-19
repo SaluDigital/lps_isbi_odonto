@@ -345,9 +345,37 @@ image-slot{ --is-bg:var(--green-wash); background:var(--green-wash); }
   letter-spacing:.08em;
   text-transform:uppercase;
 }
+.feat-card--no-badge::before{
+  display:none;
+}
 .feat-card .ico svg{ width:28px; height:28px; }
 .feat-card h3{ font-size:1.24rem; margin-bottom:11px; }
 .feat-card p{ margin:0; color:var(--ink-60); font-size:.97rem; line-height:1.55; }
+.feat-grid--stacked{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:stretch;
+}
+.feat-grid--stacked .feat-card,
+.feat-grid--stacked .feat-card--featured{
+  grid-column:span 1;
+}
+.feat-media{
+  margin:0;
+  display:flex;
+  align-self:stretch;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-xs);
+  border:1px solid var(--grey-100);
+  background:#fff;
+}
+.feat-media img{
+  display:block;
+  flex:1 1 auto;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 .feat-callout{
   margin-top:22px;
   display:grid;
