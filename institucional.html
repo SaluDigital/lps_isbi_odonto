@@ -29,7 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css?v=20260619-1">
+<link rel="stylesheet" href="styles.css?v=20250622">
 <style id="page-fixes">
   a.btn[href*="wa.me"],
   a.btn[href*="wa.me"]:visited,
@@ -89,6 +89,120 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     width:min(220px, 100%) !important;
     max-width:220px !important;
     height:auto !important;
+  }
+  .structure-rows{
+    display:grid !important;
+    gap:20px !important;
+    margin-top:50px !important;
+  }
+  .structure-row{
+    display:grid !important;
+    gap:20px !important;
+    align-items:stretch !important;
+  }
+  .structure-row > .feat-card,
+  .structure-row > .feat-card--featured{
+    grid-column:auto !important;
+  }
+  .structure-row--two{
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  }
+  .structure-row--three{
+    grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+  }
+  .about-carousel{
+    position:relative !important;
+    width:min(100%, 420px) !important;
+    margin-inline:auto !important;
+    overflow:hidden !important;
+  }
+  #estrutura .about-visual{
+    display:block !important;
+    width:100% !important;
+    padding:0 !important;
+    overflow:hidden !important;
+    border-radius:30px !important;
+  }
+  #estrutura .about-visual::before{
+    inset:auto 8% 6% auto !important;
+    width:48% !important;
+    height:22% !important;
+  }
+  #estrutura .about-track{
+    display:flex !important;
+    gap:0 !important;
+    transition:transform .55s cubic-bezier(.22,.8,.3,1) !important;
+    will-change:transform !important;
+  }
+  #estrutura .about-photo{
+    margin:0 !important;
+    flex:0 0 100% !important;
+    width:100% !important;
+    min-width:100% !important;
+    aspect-ratio:4/3 !important;
+    box-shadow:none !important;
+    border:0 !important;
+  }
+  #estrutura .about-photo--top{
+    grid-column:auto !important;
+  }
+  #estrutura .about-photo--bottom{
+    margin-top:0 !important;
+  }
+  #estrutura .about-photo img{
+    min-height:auto !important;
+  }
+  .about-carousel__nav{
+    position:absolute !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+    width:44px !important;
+    height:44px !important;
+    border:0 !important;
+    border-radius:999px !important;
+    display:grid !important;
+    place-items:center !important;
+    background:rgba(255,255,255,.94) !important;
+    color:#0b6948 !important;
+    box-shadow:0 14px 30px -18px rgba(15,40,30,.35) !important;
+    cursor:pointer !important;
+    z-index:2 !important;
+  }
+  .about-carousel__nav svg{
+    width:18px !important;
+    height:18px !important;
+  }
+  .about-carousel__nav--prev{
+    left:14px !important;
+  }
+  .about-carousel__nav--prev svg{
+    transform:rotate(90deg) !important;
+  }
+  .about-carousel__nav--next{
+    right:14px !important;
+  }
+  .about-carousel__nav--next svg{
+    transform:rotate(-90deg) !important;
+  }
+  .about-carousel__dots{
+    display:flex !important;
+    justify-content:center !important;
+    gap:10px !important;
+    margin-top:18px !important;
+  }
+  .about-carousel__dots button{
+    width:10px !important;
+    height:10px !important;
+    padding:0 !important;
+    border:0 !important;
+    border-radius:999px !important;
+    background:#cfe0d6 !important;
+    cursor:pointer !important;
+    transition:width .2s ease, background .2s ease !important;
+  }
+  .about-carousel__dots button.is-active{
+    width:28px !important;
+    background:#0b6948 !important;
   }
   .team-grid{
     display:grid !important;
@@ -173,6 +287,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       grid-template-columns:1fr !important;
       align-items:flex-start !important;
     }
+    .structure-row--three{
+      grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+    }
+    .structure-row--three .feat-card:last-child{
+      grid-column:1 / -1 !important;
+    }
     .hero__cta{
       display:flex !important;
       margin-top:28px !important;
@@ -212,6 +332,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       width:min(150px, 52vw) !important;
       max-width:150px !important;
       margin:12px auto 20px !important;
+    }
+    .structure-row--two,
+    .structure-row--three,
+    #estrutura .about-visual{
+      grid-template-columns:1fr !important;
+    }
+    .about-carousel{
+      width:min(100%, 360px) !important;
+    }
+    .about-carousel__nav{
+      width:40px !important;
+      height:40px !important;
     }
   }
 </style>
@@ -359,35 +491,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="eyebrow">Nossa estrutura</span>
       <h2 class="title">Estrutura completa para cuidar do seu sorriso com mais segurança</h2>
     </div>
-    <div class="feat-grid feat-grid--stacked reveal">
-      <figure class="feat-media">
-        <img src="assets/centro-cirurgico.jpeg" alt="Centro cirúrgico do ISBI Odonto">
-      </figure>
-      <article class="feat-card feat-card--featured" data-badge="ESTRUTURA">
-        <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-scan"/></svg></div>
-        <h3>Centro cirúrgico próprio</h3>
-        <p>O centro cirúrgico da clínica permite realizar etapas cirúrgicas com mais previsibilidade, suporte e segurança para casos que exigem maior estrutura.</p>
-      </article>
-      <article class="feat-card feat-card--featured feat-card--no-badge">
-        <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-flask"/></svg></div>
-        <h3>Laboratório anexo ao consultório</h3>
-        <p>O laboratório anexo ao consultório aproxima as etapas clínicas e laboratoriais, contribuindo para mais precisão, agilidade e personalização em diferentes fases do tratamento.</p>
-      </article>
-      <article class="feat-card">
-        <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg></div>
-        <h3>Localização estratégica</h3>
-        <p>Localizado no bairro Santa Quitéria, o ISBI Odonto tem fácil acesso para pacientes de diferentes regiões de Curitiba.</p>
-      </article>
-      <article class="feat-card">
-        <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-team"/></svg></div>
-        <h3>Avaliação com o próprio profissional</h3>
-        <p>A avaliação é feita pelo profissional responsável pelo planejamento e condução do tratamento, trazendo mais clareza no diagnóstico e na tomada de decisão.</p>
-      </article>
-      <article class="feat-card">
-        <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-heart"/></svg></div>
-        <h3>Atendimento humanizado</h3>
-        <p>Um atendimento próximo, claro e cuidadoso para que o paciente entenda cada etapa do tratamento e se sinta acolhido durante sua jornada.</p>
-      </article>
+    <div class="structure-rows reveal">
+      <div class="structure-row structure-row--two">
+        <article class="feat-card feat-card--featured" data-badge="DESTAQUE">
+          <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-flask"/></svg></div>
+          <h3>Laboratório anexo ao consultório</h3>
+          <p>O laboratório anexo ao consultório aproxima as etapas clínicas e laboratoriais, contribuindo para mais precisão, agilidade e personalização em diferentes fases do tratamento.</p>
+        </article>
+        <article class="feat-card feat-card--featured" data-badge="ESTRUTURA">
+          <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-scan"/></svg></div>
+          <h3>Centro cirúrgico próprio</h3>
+          <p>O centro cirúrgico da clínica permite realizar etapas cirúrgicas com mais previsibilidade, suporte e segurança para casos que exigem maior estrutura.</p>
+        </article>
+      </div>
+      <div class="structure-row structure-row--three">
+        <article class="feat-card">
+          <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-team"/></svg></div>
+          <h3>Avaliação com o próprio profissional</h3>
+          <p>A avaliação é feita pelo profissional responsável pelo planejamento e condução do tratamento, trazendo mais clareza no diagnóstico e na tomada de decisão.</p>
+        </article>
+        <article class="feat-card">
+          <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-heart"/></svg></div>
+          <h3>Atendimento humanizado</h3>
+          <p>Um atendimento próximo, claro e cuidadoso para que o paciente entenda cada etapa do tratamento e se sinta acolhido durante sua jornada.</p>
+        </article>
+        <article class="feat-card">
+          <div class="ico"><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg></div>
+          <h3>Localização estratégica</h3>
+          <p>Localizado no bairro Santa Quitéria, o ISBI Odonto tem fácil acesso para pacientes de diferentes regiões de Curitiba.</p>
+        </article>
+      </div>
     </div>
     <div class="feat-callout reveal">
       <div class="feat-callout__copy">
@@ -424,13 +557,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ============ 7. SOBRE O ISBI ============ -->
 <section class="section" id="estrutura">
   <div class="wrap about-grid">
-    <div class="about-visual reveal">
-      <figure class="about-photo about-photo--bottom">
-        <img src="assets/sobre2.webp" alt="Detalhe do espaço clínico do ISBI Odonto">
-      </figure>
-      <figure class="about-photo about-photo--top">
-        <img src="assets/sobre1.webp" alt="Ambiente interno do ISBI Odonto">
-      </figure>
+    <div class="about-carousel reveal" aria-label="Galeria de fotos do ISBI Odonto">
+      <div class="about-visual">
+        <div class="about-track">
+          <figure class="about-photo about-photo--bottom">
+            <img src="assets/sobre2.webp" alt="Detalhe do espaço clínico do ISBI Odonto">
+          </figure>
+          <figure class="about-photo about-photo--top">
+            <img src="assets/sobre1.webp" alt="Ambiente interno do ISBI Odonto">
+          </figure>
+          <figure class="about-photo about-photo--extra">
+            <img src="assets/centro-cirurgico.jpeg" alt="Centro cirúrgico do ISBI Odonto">
+          </figure>
+        </div>
+      </div>
+      <button class="about-carousel__nav about-carousel__nav--prev" type="button" aria-label="Foto anterior">
+        <svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg>
+      </button>
+      <button class="about-carousel__nav about-carousel__nav--next" type="button" aria-label="Próxima foto">
+        <svg viewBox="0 0 24 24"><use href="#i-chevron"/></svg>
+      </button>
+      <div class="about-carousel__dots" aria-label="Navegação da galeria"></div>
     </div>
     <div class="about-copy reveal">
       <span class="eyebrow">Sobre</span>
@@ -750,7 +897,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script src="assets/image-slot.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=20250622"></script>
 </body>
 </html>
 

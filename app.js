@@ -164,6 +164,66 @@
       window.addEventListener("resize", update);
     });
 
+    /* ---------- About carousel ---------- */
+    console.log("[ISBI] about-carousel init v2");
+    Array.prototype.forEach.call(document.querySelectorAll(".about-carousel"), function (carousel) {
+      var trackEl = carousel.querySelector(".about-track");
+      var slides = Array.prototype.slice.call(carousel.querySelectorAll(".about-photo"));
+      var dotsWrap = carousel.querySelector(".about-carousel__dots");
+      var prevBtn = carousel.querySelector(".about-carousel__nav--prev");
+      var nextBtn = carousel.querySelector(".about-carousel__nav--next");
+      console.log("[ISBI] track:", !!trackEl, "slides:", slides.length, "dots:", !!dotsWrap, "prev:", !!prevBtn, "next:", !!nextBtn);
+      if (!trackEl || slides.length < 2 || !dotsWrap || !prevBtn || !nextBtn) return;
+
+      var index = 0;
+      var total = slides.length;
+      var autoplayId = null;
+      var pauseAutoplay = false;
+
+      function buildDots() {
+        dotsWrap.innerHTML = "";
+        for (var i = 0; i < total; i++) {
+          var dot = document.createElement("button");
+          dot.type = "button";
+          dot.setAttribute("aria-label", "Ir para foto " + (i + 1));
+          dot.addEventListener("click", (function (si) {
+            return function () { index = si; update(); restartAutoplay(); };
+          })(i));
+          dotsWrap.appendChild(dot);
+        }
+      }
+
+      function update() {
+        trackEl.style.transform = "translateX(-" + (index * 100) + "%)";
+        var dots = dotsWrap.querySelectorAll("button");
+        for (var i = 0; i < dots.length; i++) {
+          dots[i].classList.toggle("is-active", i === index);
+        }
+      }
+
+      function goTo(n) {
+        index = (n % total + total) % total;
+        update();
+      }
+
+      prevBtn.addEventListener("click", function () { goTo(index - 1); restartAutoplay(); });
+      nextBtn.addEventListener("click", function () { goTo(index + 1); restartAutoplay(); });
+
+      carousel.addEventListener("mouseenter", function () { pauseAutoplay = true; });
+      carousel.addEventListener("mouseleave", function () { pauseAutoplay = false; });
+
+      function restartAutoplay() {
+        if (autoplayId) clearInterval(autoplayId);
+        autoplayId = setInterval(function () {
+          if (!pauseAutoplay) goTo(index + 1);
+        }, 4200);
+      }
+
+      buildDots();
+      update();
+      restartAutoplay();
+    });
+
     /* ---------- Sticky mobile CTA ---------- */
     if (window.matchMedia("(max-width:640px)").matches) {
       document.body.classList.add("has-sticky");
