@@ -338,6 +338,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "medicalSpecialty": "Dentistry"
 }
 </script>
+<style id="attendance-notice-styles">
+.attendance-notice{
+  width:min(340px,calc(100% - 32px));
+  max-height:calc(100dvh - 32px);
+  margin:auto;
+  padding:24px;
+  border:1px solid var(--green-line);
+  border-radius:24px;
+  background:var(--white);
+  color:var(--ink);
+  box-shadow:0 24px 80px rgba(3,55,38,.24);
+  text-align:center;
+}
+.attendance-notice::backdrop{background:rgba(15,40,30,.42);backdrop-filter:blur(4px);}
+.attendance-notice__close{
+  position:absolute;top:8px;right:8px;
+  width:44px;height:44px;display:grid;place-items:center;
+  border:0;border-radius:50%;background:transparent;color:var(--ink-60);cursor:pointer;
+}
+.attendance-notice__close:hover{background:var(--green-wash);}
+.attendance-notice__close svg{width:20px;height:20px;}
+.attendance-notice__icon{
+  display:grid;place-items:center;width:42px;height:42px;margin:0 auto 14px;
+  border-radius:13px;background:var(--green-wash);color:var(--green);
+}
+.attendance-notice__icon svg{width:22px;height:22px;}
+.attendance-notice__label{display:block;margin-bottom:12px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);}
+.attendance-notice__text{margin:0;font-family:var(--font-head);font-size:1.05rem;line-height:1.45;text-wrap:balance;}
+.attendance-notice__confirm{
+  display:block;width:100%;min-height:44px;margin-top:18px;padding:10px 18px;
+  border:0;border-radius:12px;background:var(--green);color:#fff;font:700 .95rem var(--font-body);cursor:pointer;
+}
+.attendance-notice__confirm:hover{background:var(--green-dark);}
+.attendance-notice button:focus-visible{outline:3px solid var(--green-soft);outline-offset:3px;}
+body.attendance-notice-open{overflow:hidden;}
+@media(max-width:640px){.attendance-notice{padding:24px 20px;}}
+</style>
 </head>
 <body>
 
@@ -812,6 +849,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><svg viewBox="0 0 24 24"><use href="#i-phone"/></svg>(41) 3228-1313</li>
           <li><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg>R. Prof. Ulisses Vieira, 1315 — Santa Quitéria, Curitiba - PR</li>
           <li><svg viewBox="0 0 24 24"><use href="#i-clock"/></svg>Segunda a sexta-feira</li>
+          <li><a href="https://www.instagram.com/isbiodontologia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram do ISBI Odonto (abre em nova aba)"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg>@isbiodontologia</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -846,5 +884,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="assets/image-slot.js"></script>
 <script src="app.js?v=20250622"></script>
 <script src="https://plugin.sellbot.tech/v3/embed.min.js" defer></script>
+<dialog class="attendance-notice" id="attendance-notice" aria-labelledby="attendance-notice-label" aria-describedby="attendance-notice-text">
+  <button class="attendance-notice__close" type="button" aria-label="Fechar aviso"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <span class="attendance-notice__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5v.01"/></svg></span>
+  <span class="attendance-notice__label" id="attendance-notice-label">Sobre o atendimento</span>
+  <p class="attendance-notice__text" id="attendance-notice-text"><strong>Não trabalhamos com planos odontológicos ou convênios.</strong></p>
+  <button class="attendance-notice__confirm" type="button" autofocus>Entendi</button>
+</dialog>
+<script>
+(function () {
+  "use strict";
+  function initAttendanceNotice() {
+    var notice = document.getElementById("attendance-notice");
+    var noticeKey = "isbi-facetas-attendance-notice-dismissed";
+    var dismissed = false;
+    try { dismissed = sessionStorage.getItem(noticeKey) === "1"; } catch (e) {}
+    if (notice && typeof notice.showModal === "function" && !dismissed) {
+      function closeNotice() { notice.close(); }
+      notice.querySelector(".attendance-notice__close").addEventListener("click", closeNotice);
+      notice.querySelector(".attendance-notice__confirm").addEventListener("click", closeNotice);
+      notice.addEventListener("click", function (event) {
+        var bounds = notice.getBoundingClientRect();
+        if (event.target === notice && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) closeNotice();
+      });
+      notice.addEventListener("close", function () {
+        document.body.classList.remove("attendance-notice-open");
+        try { sessionStorage.setItem(noticeKey, "1"); } catch (e) {}
+      });
+      window.setTimeout(function () {
+        notice.showModal();
+        document.body.classList.add("attendance-notice-open");
+      }, 700);
+    }
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initAttendanceNotice);
+  } else {
+    initAttendanceNotice();
+  }
+})();
+</script>
 </body>
 </html>
